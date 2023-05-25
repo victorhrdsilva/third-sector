@@ -34,5 +34,3 @@ export const ContinueButton = styled.button`
     opacity: 1;
   }
 `;
-
-
