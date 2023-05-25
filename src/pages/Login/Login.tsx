@@ -48,7 +48,7 @@ export default function Login() {
           </p>
         </Wrapper>
       </BackgroudColor>
-      <BackgroudColor inputColor="true"></BackgroudColor>
+      <BackgroudColor inputColor="var(--secundary-color)"></BackgroudColor>
     </Container>
   );
 }

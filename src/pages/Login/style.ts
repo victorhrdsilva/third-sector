@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface BackgroudColorProps {
+  inputColor?: string;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,11 +11,10 @@ export const Container = styled.div`
   box-sizing: border-box;
 `;
 
-export const BackgroudColor = styled.div`
+export const BackgroudColor = styled.div<BackgroudColorProps>`
   width: 100vw;
   height: 50vh;
-  background-color: ${(props) =>
-    props.inputColor ? "var(--secundary-color)" : "var(--primary-color)"};
+  background-color: ${(props) => props.inputColor || "var(--primary-color)"};
 `;
 
 export const Wrapper = styled.div`
@@ -31,4 +34,4 @@ export const Wrapper = styled.div`
     margin-top: 22px;
   }
 
-`
+`;
