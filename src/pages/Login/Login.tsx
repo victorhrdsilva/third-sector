@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { login } from "../../services/authService";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { BackgroudColor, Container, Wrapper } from "./style";
+import { BackgroudColor, Container, FloatingBox, FormBox, InfoBox } from "./style";
 
 const loginUserFormSchema = yup.object().shape({
   email: yup.string().required("Email é obrigatório").email("Email inválido"),
@@ -36,9 +36,11 @@ export default function Login() {
   }
 
   return (
-    <Container>
-      <BackgroudColor>
-        <Wrapper>
+    <>
+      <BackgroudColor></BackgroudColor>
+      <Container>
+        <InfoBox>
+          <div>
           <h1>Sign in to</h1>
           <h2>Lorem Ipsum is simply</h2>
           <p>
@@ -46,9 +48,14 @@ export default function Login() {
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s,
           </p>
-        </Wrapper>
-      </BackgroudColor>
-      <BackgroudColor inputColor="var(--secundary-color)"></BackgroudColor>
-    </Container>
+          </div>
+        </InfoBox>
+        <FormBox>
+          <FloatingBox>
+
+          </FloatingBox>
+        </FormBox>
+      </Container>
+    </>
   );
 }
