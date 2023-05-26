@@ -1,9 +1,12 @@
+import { Button } from "react-bootstrap";
+import { Form } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   height: 100vh;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const BackgroudColor = styled.div`
@@ -14,12 +17,13 @@ export const BackgroudColor = styled.div`
   z-index: -1;
 `;
 
-export const InfoBox = styled.div`
+export const InfoSide = styled.div`
   width: 50vw;
   div {
-    width: 396px;
+    max-width: 396px;
+    box-sizing: border-box;
     color: #ffffff;
-    margin: 15vh 0 0 10vw;
+    margin: 15vh 5vw 0 10vw;
     h1 {
       font-size: 2.12rem;
     }
@@ -35,7 +39,7 @@ export const InfoBox = styled.div`
   }
 `;
 
-export const FormBox = styled.div`
+export const FormSide = styled.div`
   width: 50vw;
   display: flex;
   justify-content: center;
@@ -43,9 +47,58 @@ export const FormBox = styled.div`
 `
 
 export const FloatingBox = styled.div`
-  width: 539px;
-  height: 741px;
+  padding: clamp(15px, 5vw, 44px);
+  height: 80vh;
+  width:50vw;
+  max-width: 500px;
+  max-height: 741px;
   background-color: #FFFFFF;
   border-radius: 40px;
   box-shadow: 10px 11px 29px -15px black;
+  h1{
+    font-weight: 600;
+    font-size: clamp(30px, 50px, 55px);
+    margin-bottom: 5vh;
+  }
+  label {
+    font-size: 16px;
+  }
+
+  ::placeholder{
+    font-weight: 300;
+    color: #808080;
+    font-size: 14px;
+  }
+`
+
+export const SinginButton = styled(Button)`
+  width: 100%;
+  height: 44px;
+  background-color: var(--primary-color);
+  border: none;
+  box-shadow: 5px 5px 20px -15px black;
+`
+
+export const FormInput = styled(Form)`
+  input {
+    height: 44px;
+  }
+`
+export const ErrorMessage = styled.p`
+  color: var(--red);
+  margin-top: 5px;
+  font-size: 16px;
+`;
+
+export const HeaderForm = styled.div`
+  display: flex;
+  justify-content: space-between;
+  a{
+    color: var(--primary-color);
+    font-size: 11px;
+  }
+  p{
+    font-size: 21px;
+  }
+  
 `
