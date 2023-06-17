@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMemo } from "react";
-import {MainContext} from "./MainContext";
+import { MainContext } from "./MainContext";
+
 type Props = {
-  children:JSX.Element
+  children: JSX.Element;
 }
 
 export default function ThirdSectorProvider({ children }: Props) {
-  const exampleValue = "Exemplo de valor";
+  const [adress, setAdress] = useState<string[]>([]);
 
   const value = useMemo(() => ({
-    exampleValue: exampleValue
-  }), [exampleValue]);
-  return(
+    adress: adress, // Define o tipo como string[]
+    setAdress: setAdress as React.Dispatch<React.SetStateAction<string[]>> // Define o tipo do setter
+  }), [adress, setAdress]);
+
+  return (
     <MainContext.Provider value={value}>
       {children}
     </MainContext.Provider>

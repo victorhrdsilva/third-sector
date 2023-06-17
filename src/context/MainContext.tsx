@@ -1,9 +1,10 @@
 import { createContext } from "react";
 
 type globalContext = {
-  exampleValue: string;
+  adress: string[];
+  setAdress: (address: string[]) => void;
 };
 
 const MainContext = createContext({} as globalContext);
 
-export {MainContext};
+export { MainContext };

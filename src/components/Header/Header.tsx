@@ -23,7 +23,7 @@ export default function Header() {
           </NavItens>
           <NavItens>
             <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/register">Registro</Nav.Link>
+            <Nav.Link href="/create">Registro</Nav.Link>
           </NavItens>
         </Navbar.Collapse>
       </Container>

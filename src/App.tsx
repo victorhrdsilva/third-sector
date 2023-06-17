@@ -6,6 +6,7 @@ import { GlobalStyle } from "./styles/global";
 import Register from "./pages/Register/Register";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import CreateUser from "./pages/CreateUser/CreateUser";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/register/contact" element={<Register />} />
           <Route path="/register/comments" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/create" element={<CreateUser />} />
 
         </Routes>
       </>
