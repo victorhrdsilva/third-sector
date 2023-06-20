@@ -17,7 +17,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/register/adress" element={<Register />} />
+          <Route path="/register/diversity" element={<Register />} />
+          <Route path="/register/contact" element={<Register />} />
+          <Route path="/register/comments" element={<Register />} />
           <Route path="/login" element={<Login />} />
+
         </Routes>
       </>
     </ThirdSectorProvider>

@@ -1,18 +1,16 @@
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import axios from "axios";
 
+const url : string = "https://apigateway-production.up.railway.app/api/"
 
-async function login(body: { password: string, email: string }) {
-    const auth = getAuth();
-    await signInWithEmailAndPassword(auth, body.email, body.password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user)
-            return user
-        })
-        .catch((error) => {
-            return error
-        })
+let config = {
+  headers: {
+    Authorization: ``
+  }
 }
+
+function login(body: { password: string, email: string }) {
+    const promise = axios.post(`${url}login`, body);
+    return promise;
+};
 
 export { login }
