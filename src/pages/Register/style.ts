@@ -13,6 +13,6 @@ export const MenuDiv = styled.div`
   width: 350px;
   height: 1300px;
 `
-export const ContentDiv = styled.div`
+export const ContentDiv = styled.button`
   margin: 0 auto;
 `

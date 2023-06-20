@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import ThirdSectorProvider from "./context/ThirdSectorProvider";
 import { Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 import { GlobalStyle } from "./styles/global";
 import Register from "./pages/Register/Register";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   const [count, setCount] = useState(0);
