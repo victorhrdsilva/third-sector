@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   height: 100vh;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 `;
 
 export const BackgroudColor = styled.div`
@@ -44,32 +44,31 @@ export const FormSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const FloatingBox = styled.div`
   padding: clamp(15px, 5vw, 44px);
   height: 80vh;
-  width:50vw;
+  width: 50vw;
   max-width: 500px;
   max-height: 741px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 40px;
   box-shadow: 10px 11px 29px -15px black;
-  h1{
+  h1 {
     font-weight: 600;
     font-size: clamp(30px, 50px, 55px);
-    margin-bottom: 5vh;
   }
   label {
     font-size: 16px;
   }
 
-  ::placeholder{
+  ::placeholder {
     font-weight: 300;
     color: #808080;
     font-size: 14px;
   }
-`
+`;
 
 export const SinginButton = styled(Button)`
   width: 100%;
@@ -77,13 +76,14 @@ export const SinginButton = styled(Button)`
   background-color: var(--primary-color);
   border: none;
   box-shadow: 5px 5px 20px -15px black;
-`
+  margin-top: 10%;
+`;
 
 export const FormInput = styled(Form)`
   input {
     height: 44px;
   }
-`
+`;
 export const ErrorMessage = styled.p`
   color: var(--red);
   margin-top: 5px;
@@ -93,12 +93,48 @@ export const ErrorMessage = styled.p`
 export const HeaderForm = styled.div`
   display: flex;
   justify-content: space-between;
-  a{
+  a {
     color: var(--primary-color);
     font-size: 11px;
   }
-  p{
+  p {
     font-size: 21px;
   }
-  
-`
+`;
+
+export const SocialLogin = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 8% 0;
+  transition: .4s;
+  :hover {
+    filter: brightness(60%);    
+  }
+  button {
+    height: 55px;
+    border-radius: 9px;
+    border: none;
+  }
+
+  img {
+    width: 25px;
+  }
+`;
+
+export const PrimarySocialButton = styled.button`
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+
+  p {
+    margin: 0 0 0 5%;
+  }
+`;
+
+export const SecundarySocialButton = styled.button`
+  width: 55px;
+  border-radius: 9px;
+  background-color: #f6f6f6;
+`;
