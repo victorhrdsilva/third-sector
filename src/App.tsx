@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
-import ThirdSectorProvider from './context/ThirdSectorProvider';
-import { Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from "react";
+import ThirdSectorProvider from "./context/ThirdSectorProvider";
+import { Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import { GlobalStyle } from "./styles/global";
+import Register from "./pages/Register/Register";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <ThirdSectorProvider>
-      <Routes>
-          {/*<Route path="/" element={<LoginPage />}></Route>
-          <Route path='/register' element={<RegisterPage />}></Route>
-                                   <Route
-                            path="/home"
-                            element={
-                                <PrivatePage>
-                                    <Home />
-                                </PrivatePage>
-                            }
-                        /> */}
+      <>
+        <GlobalStyle />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/register/adress" element={<Register />} />
+          <Route path="/register/diversity" element={<Register />} />
+          <Route path="/register/contact" element={<Register />} />
+          <Route path="/register/comments" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+
         </Routes>
+      </>
     </ThirdSectorProvider>
   );
 }
