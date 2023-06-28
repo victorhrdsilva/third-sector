@@ -5,7 +5,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { GlobalStyle } from "./styles/global";
 import Register from "./pages/Register/Register";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import SingIn from "./pages/SingIn";
+import SingInUp from "./components/FormPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,8 +22,7 @@ function App() {
           <Route path="/register/diversity" element={<Register />} />
           <Route path="/register/contact" element={<Register />} />
           <Route path="/register/comments" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-
+          <Route path="/login" element={<SingIn />} />
         </Routes>
       </>
     </ThirdSectorProvider>
